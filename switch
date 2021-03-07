@@ -1,0 +1,25 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int main(void)
+{
+	int a = 1;
+	int b = 2;
+	switch(a)
+	{
+	case 1:a++;
+	case 2:b++;
+	case 3:
+		switch(a)
+	{
+	case 1:a++;
+	case 2:b++; a++; break;
+	}
+	case 4:b++;
+		break;
+		default:
+			break;
+		
+	}
+	printf("%d\n%d", b, a);
+	return 0;
+}
