@@ -1,0 +1,26 @@
+//#include <stdio.h>
+//int main(void)
+//{
+//	int a = 1;
+//	int b = 2;
+//	scanf("%d", &a);
+//	while (a != 11)
+//	{
+//		printf("%d", b);
+//		b++;
+//		a = b++;
+//	}
+//	return 0;
+//}
+#include <stdio.h>
+int main(void)
+{
+	int ch = 1;
+	
+	while ((ch=getchar()) != EOF)
+	{
+		putchar(ch);
+	}
+
+	return 0;
+}
