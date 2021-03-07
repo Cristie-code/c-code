@@ -1,0 +1,40 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include<stdio.h>
+int main(void)
+{
+	int ch = 0;
+	char month[10] = { 1 };
+	char birthyear[20] = {0};
+	printf("我想知道你是哪一年出生的\n");
+	scanf("%s", birthyear);
+	printf("请确定(Y/N)\n");
+	getchar();
+	ch = getchar();
+	if (ch == 'Y')
+	{
+		printf("确定成功");
+	}
+	else if (ch == 'y')
+	{
+		printf("宝贝儿，大写");
+	}
+	else if(ch=='N')
+	{
+		printf("未确认，请重新输入");
+	}
+	else
+	{
+		printf("别闹~，宝贝儿");
+	}
+	//if (birthyear == {})
+	//{
+	//	printf("我掐指一算，你可能是我对象");
+	//}
+	//else
+	//{
+	//	printf("你谁啊，一边去")；
+	//}
+
+	return 0;
+}
