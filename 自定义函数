@@ -1,0 +1,19 @@
+#include<stdio.h>
+int search(int x,int y)
+{
+
+	if (x > y)
+	{
+		y = x;
+	}
+	return y;
+}
+int main(void)
+{
+	int a;
+	int b;
+	scanf_s("%d,%d", &a, &b);
+	int max=search(a, b);
+	printf("%d", max);
+	return 0;
+}
