@@ -1,0 +1,51 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int a = 0;
+int prime_number_judgment(int num)//判断素数
+{
+	int k = 1;
+	int b;
+	
+	b = sqrt(num);
+	for (int times = 2; times <= b; times++)
+	{
+		
+		k = num % times;
+
+		if (k==0)
+		{
+			break;
+		}
+		k = 1;
+	}
+	return k;//是素数返回1，不是素数返回0
+}
+int num_Search(int key_in)
+{
+	int key_in_plus;
+	for (key_in_plus = key_in+1; prime_number_judgment(key_in_plus)!=1; key_in_plus++);
+
+	return key_in_plus;//返回符合条件的值
+}
+int main(void)
+{
+
+		while (1)
+		{
+
+			int m = 0;
+
+			cout << "请输入m" << endl;
+			cin >> m;
+			if (a == m)
+			{
+				cout << "请勿输入除数字外其它符号，程序终止，请重启" << endl;//输入字母会一直循环cout"请输入m"
+				break;
+			}
+			a = m;
+			cout << num_Search(m) << endl;
+		}
+		
+
+	return 0;
